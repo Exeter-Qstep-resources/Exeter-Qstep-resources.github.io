@@ -23,6 +23,8 @@ Below are a series of training resources for learning the R statistical programm
 
 **Intermediate data analysis in R**
 
+This workshop introduces various ways of automating regression output from Stata and R. It starts by covering ways how to automate table creation for Latex and Word and then proceed to visualising marginal effects and predicted probabilities from linear and binary dependent variable regressions and finally discuss visualisation of interaction effects.
+
 [Presenting and visualising regression results in R - zip folder](Presenting_and_visualising_regression_results_in_R.zip)
 
 
@@ -36,6 +38,15 @@ Below are a series of training resources for learning the R statistical programm
 [Introduction to SQL for Data Management - PowerPoint](Q-Step_WS_20032019_Intro_to_SQL_for_Data_Science.pptx)
 
 # Quantiative research methods
+
+
+**Writing a quantitative dissertation**
+
+[Q-Step How to write a quantitative dissertation handbook - pdf](POL3040 How to Write a Quants Dissertation_handbook.pdf)
+
+[Q-Step Disseration workshop 2016 - weblink](http://connect.exeter.ac.uk/p6ucunmp6a4/?proto=true)
+
+[How to write a quantitative dissertation additional resources](Writing_quantitative_dissertation_supporting_materials.zip)
 
 # Qualitative research methods
 
