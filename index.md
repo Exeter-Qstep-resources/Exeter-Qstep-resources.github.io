@@ -23,7 +23,7 @@ Below are a series of training resources for learning the R statistical programm
 
 **Intermediate data analysis in R**
 
-[Presenting and visualising regression results in R](Presenting_and_visualising_regression_results_in_R.zip)
+[Presenting and visualising regression results in R - zip folder](Presenting_and_visualising_regression_results_in_R.zip)
 
 
 ## SPSS
