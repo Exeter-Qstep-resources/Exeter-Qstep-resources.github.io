@@ -6,7 +6,7 @@ Here, you will find a range of teaching materials that have been developed by me
 ## Python
 Below are a series of resources for learning the Python generic programming language. Most of these are tailored towards those who wish to learn the language for data analytics purposes, but many of the skills and methods discussed in these materials are transferable.
 
-**Introduction to Python**
+#### Introduction to Python
 
 [Practical Introduction to Python - pdf](Q-Step_WS_02102019_Practical_introduction_to_Python.pdf)
 
@@ -15,13 +15,13 @@ Below are a series of resources for learning the Python generic programming lang
 ## R
 Below are a series of training resources for learning the R statistical programming environment.
 
-**Introduction to R**
+#### Introduction to R
 
 [Introduction to R - pdf](Q-Step_WS_09012019_An_introduction_to_R.pdf)
 
 [Introduction to R - PowerPoint](Q-Step_WS_09012019_An_introduction_to_R.pptx)
 
-**Intermediate data analysis in R**
+#### Intermediate data analysis in R
 
 This workshop introduces various ways of automating regression output from Stata and R. It starts by covering ways how to automate table creation for Latex and Word and then proceed to visualising marginal effects and predicted probabilities from linear and binary dependent variable regressions and finally discuss visualisation of interaction effects.
 
@@ -31,7 +31,7 @@ This workshop introduces various ways of automating regression output from Stata
 ## SPSS
 
 ## SQL
-**Introduction to SQL**
+#### Introduction to SQL
 
 [Introduction to SQL for Data Management - pdf](Q-Step_WS_20032019_Intro_to_SQL_for_Data_Science.pdf)
 
@@ -40,7 +40,7 @@ This workshop introduces various ways of automating regression output from Stata
 # Quantiative research methods
 
 
-**Writing a quantitative dissertation**
+## Writing a quantitative dissertation
 
 These resources are aimed at Q-Step students in their final year of study that are preparing to write a quantitative dissertation. The recorded workshop and the session slides introduce students to the core aspects of writing a "quantitative" dissertation, including several "tips and tricks" regarding research design and the overall dissertation structure.
 
