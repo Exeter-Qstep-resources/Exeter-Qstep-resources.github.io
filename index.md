@@ -34,6 +34,20 @@ This workshop provides an introduction to basic programming notions and their ap
 
 [Previous Introduction to R workshop from 2016 materials - zip folder](Introduction_to_r_2016_materials.zip)
 
+#### Data analysis in R
+
+Building upon the "Introduction to Programming in R" session, this workshop provides a brief introduction to major data analysis topics and their implementation in R. Covered topics include: probability distributions, regression analysis, models for binary and categorical data.
+
+[Data analysis in R workshop - web link](http://connect.exeter.ac.uk/p6m7clhmlak/?proto=true)
+
+[Data analysis in R workshop materials - zip folder](Data_analysis_in_R_materials.zip)
+
+#### Data visualisation in R
+
+An introduction to the common approaches to data visualisation in R, including line / bar charts, scatterplots, histogram and density plots in base R and using the ggplot2 package. We will also discuss the aesthetics, geoms and faceting systems in ggplot2. Please bring your own laptop with R, RStudio, and the following packages installed: "tidyverse", "titanic".
+
+[Data visualisation in R workshop materials - zip folder](Data_visualisation_in_R.zip)
+
 #### Data management in R
 
 An introduction to some of the most popular functions and packages for data management/manipulation including fast data cleaning, recording a number of variables simultaneously, aggregating or summarising data by groups, merging tables, reshaping tables. Using an example data set provided on the spot, we will go through (s/t)apply functions, and functions provided by the dplyr package and the data.table package.
@@ -46,6 +60,11 @@ This workshop introduces various ways of automating regression output from Stata
 
 [Presenting and visualising regression results in R - zip folder](Presenting_and_visualising_regression_results_in_R.zip)
 
+#### Social network analysis in R
+
+The workshop provides an introduction for beginners to Social Network Analysis.  It gives an overview of key concepts needed to design research that looks at social relations (networks) that connect individual units (actors), so that students can apply social network analysis to their own research. The workshop focuses on the description and visualisation of social network data, looking at structural properties of a network, as well as ideas of centrality in the network. To understand the SNA perspective, practical examples are given from academic literature, illustrative graphics from the media, and source material visualised through R. 
+
+[Social Network Analysis in R workshop materials - zip folder](Social_network_analysis_in_R.zip)
 
 #### Geographical and Place-based dependence in multilevel models
 
