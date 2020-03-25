@@ -27,6 +27,18 @@ Below are a series of training resources for learning the R statistical programm
 
 [Introduction to R - PowerPoint](Q-Step_WS_09012019_An_introduction_to_R.pptx)
 
+**Previous introduction to R workshop**
+This workshop provides an introduction to basic programming notions and their application in R. We will start with an overview of R objects and their attributes. You will then learn how to import data into R and perform simple data manipulations. Finally, we will go over a few simple examples of data analysis and visualization and introduce some of the most commonly used R packages. We will be using RStudio, a user-friendly interface to R. 
+
+[Previous Introduction to R workshop from 2016 - weblink](http://connect.exeter.ac.uk/p5gdk57to5j/?launcher=false&fcsContent=true&pbMode=normal&proto=true)
+
+[Previous Introduction to R workshop from 2016 materials - zip folder](Introduction_to_r_2016_materials.zip)
+
+#### Data management in R
+
+An introduction to some of the most popular functions and packages for data management/manipulation including fast data cleaning, recording a number of variables simultaneously, aggregating or summarising data by groups, merging tables, reshaping tables. Using an example data set provided on the spot, we will go through (s/t)apply functions, and functions provided by the dplyr package and the data.table package.
+
+[Data management in R workshop materials - zip folder](Data_management_in_R.zip)
 
 #### Presenting and visualising regression results in R
 
