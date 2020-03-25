@@ -42,7 +42,9 @@ This workshop introduces various ways of automating regression output from Stata
 
 **Writing a quantitative dissertation**
 
-[Q-Step How to write a quantitative dissertation handbook - pdf](POL3040 How to Write a Quants Dissertation_handbook.pdf)
+These resources are aimed at Q-Step students in their final year of study that are preparing to write a quantitative dissertation. The recorded workshop and the session slides introduce students to the core aspects of writing a "quantitative" dissertation, including several "tips and tricks" regarding research design and the overall dissertation structure.
+
+[Q-Step How to write a quantitative dissertation handbook - pdf](POL3040_How_to_Write_a_Quants_Dissertation_handbook.pdf)
 
 [Q-Step Disseration workshop 2016 - weblink](http://connect.exeter.ac.uk/p6ucunmp6a4/?proto=true)
 
