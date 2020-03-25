@@ -15,10 +15,19 @@ Below are a series of resources for learning the Python generic programming lang
 [Practical Introduction to Python - PowerPoint](Q-Step_WS_02102019_Practical_introduction_to_Python.pptx)
 
 ## R
+Below are a series of training resources for learning the R statistical programming environment.
+
+**1. Introduction to R**
+[Introduction to R - pdf](Q-Step_WS_09012019_An_introduction_to_R.pdf)
+
+[Introduction to R - PowerPoint](Q-Step_WS_09012019_An_introduction_to_R.pptx)
 
 ## SPSS
 
 ## SQL
+[Introduction to SQL for Data Management - pdf](Q-Step_WS_20032019_Intro_to_SQL_for_Data_Science.pdf)
+
+[Introduction to SQL for Data Management - PowerPoint](Q-Step_WS_20032019_Intro_to_SQL_for_Data_Science.pptx)
 
 # Quantiative research methods
 
