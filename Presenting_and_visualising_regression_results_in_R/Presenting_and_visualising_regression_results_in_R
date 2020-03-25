@@ -1,0 +1,267 @@
+###############################################################################################################################
+#### Project: Exeter Q-Step Workshop: Presenting regression results
+#### Author: Nils-Christian Bormann
+#### Task: New set of analyses
+#### Version:
+  #1# 20 Mar 2016: Export regression tables (Stargazer) and plot predicted probabilities (Base-R)
+  #2# 21 Mar 2016: Add ggplot code and random effects model + ülots
+  
+
+###############################################################################################################################
+#### Header
+rm(list=ls()) # remove objects from R's memory
+set.seed(1234) # set seed so simulations can be reproduced 
+if(Sys.info()["user"]=="ncb") setwd("/home/ncb/Documents/Academics/Teaching/R-GIS Introduction Workshop") # working directory on personal computer
+if(Sys.info()["sysname"]=="Windows") setwd("C:/Desktop/R_course") # working directory on lab computer
+
+install.packages("stargazer", dependencies=T) # install missing libraries
+install.packages("ggplot2", dependencies=T) # install missing libraries
+install.packages("dplyr", dependencies=T) # install missing libraries
+install.packages("readstata13", dependencies=T) # install missing libraries
+install.packages("lme4", dependencies=T) # install missing libraries
+install.packages("arm", dependencies=T) # install missing libraries
+
+library(stargazer); library(ggplot2); library(dplyr); library(readstata13)
+library(lfe); library(lme4); library(arm) # load libraries
+
+###############################################################################################################################
+#### Data
+fldat <- read.dta13("data/FL03.dta")
+dim(fldat)
+names(fldat)
+summary(fldat[,1:10])
+
+###############################################################################################################################
+#### Analysis
+## Model 1: Regress population, ethnic fractionalization, and oil on democracy (ordinary least squares)
+m1 <- lm(polity2l ~ lpopl1 + ethfrac + Oil, data=fldat, na.action=na.omit)
+summary(m1)
+
+## Model 2: Regress gdp, population, ethnic fractionalization, and oil on democracy (ordinary least squares)
+m2 <- lm(polity2l ~ lgdpenl1 + lpopl1 + ethfrac + Oil, data=fldat, na.action=na.omit)
+summary(m2)
+
+## Model 3: Regress gdp, population, ethnic fractionalization, and oil on democracy + country and year fixed effects (ordinary least squares)
+m3 <- lm(polity2l ~ factor(ccode) + factor(year) + lgdpenl1 + lpopl1 + Oil, data=fldat, na.action=na.omit)
+summary(m3)
+
+## Model 3fe: Regress gdp, population, and oil on democracy + country and year fixed effects (ordinary least squares) + standard errors clustered on country
+m3fe <- felm(polity2l ~ lgdpenl1 + lpopl1 + Oil | ccode + year | 0 | ccode , data=fldat, na.action=na.omit)
+# felm asks you to specify (1) the covariates, (2) fixed effects, (3) instrumental variables, and (4) clustered standard errors
+# each of these parts is separated by an "|"
+# if you do not want to specify any of (2-4), you can simply replace it with a zero
+summary(m3fe) 
+
+## Model 4: Regress gdp, population, ethnic fractionalization, and oil on democracy (ordinary least squares)
+m4 <- lm(polity2l ~ lgdpenl1*Oil + lpopl1 + ethfrac, data=fldat, na.action=na.omit)
+summary(m4)
+
+## Model 4fe: Regress gdp, population, ethnic fractionalization, and oil on democracy (ordinary least squares)
+m4fe <- felm(polity2l ~ lgdpenl1*Oil + lpopl1 + ethfrac | 0 | 0 | ccode , data=fldat, na.action=na.omit, keepX=TRUE)
+summary(m4fe) # felm does not automatically save the data matrix ('model' in lm or glm) but keepX=TRUE does the trick
+
+## Model 5: Regress gdp, population, ethnic fractionalization and oil on democracy (linear hierarchical model)
+fldat$gdpXpop <- fldat$lgdpenl1 * fldat$lpopl1
+m5 <- lmer(polity2l ~ Oil + ethfrac + lgdpenl1 + lpopl1 + gdpXpop + (1|country) , data=fldat, na.action=na.omit)
+# '(1|ccode)' adds random effects for each country
+summary(m5)
+
+###############################################################################################################################
+#### Tables
+## Table 1
+stargazer(m1, m2, m3, 
+          style="default",
+          type="text", 
+          #out="tables/regtab1_160320", # output directory
+          covariate.labels=c("GDP (log)", "Population (log)", "Ethnic Fractionalization", "Oil"),
+          dep.var.labels.include=F, # do not show dependent variable name
+          font.size="normalsize",
+          column.sep.width="1pt", # width between fonts
+          initial.zero=T,
+          intercept.top=F,
+          model.numbers=T,
+          no.space=T,
+          notes="Standard errors in parentheses.",
+          notes.align="l",
+          notes.append=T,
+          omit="factor",
+          omit.labels="Country/Year-Fixed Effects",
+          omit.stat=c("rsq","max.rsq","lr", "logrank"),
+          star.cutoffs=c(0.05, 0.01, 0.001),
+          title="Explaining Levels of Democracy (OLS), 1945-1999."
+)
+
+############
+#EXERCISE 1#
+############
+## Explore what some of the options do
+  # either change them, for example, from TRUE to FALSE or vice versa
+  # or read up on them in the help file ?stargazer
+## Remove Residual Standard Error from table
+## Add name of Dependent variable to table
+## Add Model 4 to the table
+  # reorder variables so that the table indicates, GDP first, oil*gdp second, and oil third with population and ethnic fractionalizaton afterwards
+  # hint: pay attention to the variable labels
+
+###############################################################################################################################
+#### Substantive Effects
+## predict effect of oil on democracy in average country from Model~2
+pmat2 <- matrix(c(1,1, # intercept
+                  rep(mean(m2$model$lgdpenl1),2), # GDP per capita
+                  rep(mean(m2$model$lpopl1),2),  # population
+                  rep(mean(m2$model$ethfrac),2), # ethnic fractionalization
+                  1,0), # Oil-exporting/non-oil exporting
+                nrow=2) # prediction matrix for model 2  (pmat2) 
+pmat2 <- as.data.frame(pmat2) # change data type to data.frame
+names(pmat2) <- c("Intercept", names(m2$model)[2:5]) # label variables
+
+pp2 <- predict(m2, pmat2, se.fit=TRUE, interval="confidence") # predict
+pp2 # check predictions
+
+
+############
+#EXERCISE 3#
+############
+## create a model matrix for Model 2 that models the effect of GDP on Polity - plot as many points of GDP as you want
+  # hint: check out the sequence command that creates an evenly-spaced series of values between two end points (e.g., min and max fo GDP variable)
+  # hint 2: think how many predicted Polity values yuo need given the number of different GDP values and the interaction with oil
+
+############
+#EXERCISE 5#
+############
+## create a model matrix for Model 4 that shows the difference between Oil exporters and non-exporters along different values of GDP
+  # hint: check out the sequence command that creates an evenly-spaced series of values between two end points (e.g., min and max fo GDP variable)
+  # hint 2: think how many predicted Polity values yuo need given the number of different GDP values and the interaction with oil
+
+###############################################################################################################################
+#### Plots
+## Plot oil effect
+# Prepare plot data by adding x-axis value and labels
+pp2plot <- data.frame(xposition=c(1,2), 
+                      label=c("Oil", "No Oil"), 
+                      polpredict=pp2$fit[,1], 
+                      lci=pp2$fit[,2], 
+                      uci=pp2$fit[,3])
+
+# plot
+#pdf("figures/oil_effect-160320.pdf", width=6, height=6)
+  plot(x=pp2plot$xposition, y=pp2plot$polpredict, 
+       pch=19,
+       xlim=c(1,2), # x axis limits
+       ylim=c(-8,2), # y axis limits
+       type="p",# points
+       xlab="Oil Exporter", # x-label
+       ylab="Predicted Polity Score", # y-label
+       axes=F # no axes
+       )
+
+  axis(1, at=c(1,2), labels=pp2plot$label, tick=F) # x-axis
+  axis(2) # y-axis
+  segments(x0=pp2plot$xposition, y0=pp2plot$lci, y1=pp2plot$uci) # add confidence intervals
+#dev.off()
+
+## Plot oil effect with ggplot2
+ggplot(data=pp2plot) + 
+    theme_bw() + # black-white theme
+    xlab("") + ylab("Predicted Polity Score") + # axis labels
+    scale_x_discrete(limits=1:2, breaks = 1:2, labels = c("Oil", "No Oil")) + # axis labels
+    geom_pointrange(aes(ymin=lci, ymax=uci, y=polpredict, x=xposition), # average effect of oil (points) + confidence intervals (range)
+                    size=1) 
+  
+ggsave("figures/oil_effect-ggplot-160320.pdf", width=6, height=6) # ggplot export (always saves last plot)
+  
+  
+############
+#EXERCISE 2#
+############
+## uncomment pdf and dev.off to save the plot into the figures folder  
+## replace the x-axis labels with Yes and No rather than Oil and No Oil
+## exchange the axis so that the polity score is on the x-axis and the oil dummy is on the y-axis
+
+############
+#EXERCISE 4#
+############
+## compute the predicted Polity score along the range of GDP scores for an otherwise average country
+  # plot a line of different values of GDP on the x-axis and different Polity scores on the y-axis
+  # Hint: this time we do not need special labels on the x-axis; just enable axis in the main plot window
+  # add confidence intervals as a polygon behind the average predicted polity score line - see ?polygon
+  # Hint: google "r plot polygon transparency" to make the polygon see-through
+
+############
+#EXERCISE 6#
+############
+## rather than only plotting the GDP effect, plot the interaction effect from GDP and oil from Model 4
+
+
+
+
+
+### Plot country-level random effects from Model 5
+# Prepare plot
+head(ranef(m5)$country) # check random effects
+dim(ranef(m5)$country) # number of random effects 
+head(se.ranef(m5)$country) # and random effects standard errors
+
+# identify oil exporting countries
+oilstates <- m5@frame %>% # m5@frame contains the data used in the analysis
+             group_by(country) %>%
+             summarise(Oil = max(Oil, na.rm = TRUE))
+
+dim(oilstates) # oilstates has as many rows as there are random effects
+
+oilstates$Oil <- ifelse(oilstates$Oil==1, "Yes", "No") # recode Oil variable from 1/0 to "Yes"/"No"
+table(oilstates$Oil)
+
+m5re <- data.frame(re = ranef(m5)$country[, "(Intercept)"], # random effect for country level
+                   lci = ranef(m5)$country[, "(Intercept)"] - 1.96*se.ranef(m5)$country[, "(Intercept)"], # 95% lower confidence interval
+                   uci = ranef(m5)$country[, "(Intercept)"] + 1.96*se.ranef(m5)$country[, "(Intercept)"], # 95% upper confidence interval
+                   country = rownames(ranef(m5)$country) # country names
+                   )
+
+m5re <- merge(m5re, oilstates, by="country", all.x=T) # merge in oil indicator
+head(m5re)
+
+m5re <- m5re[order(m5re$re, decreasing=F),] # order whole dataframe from smallest to largest random effect
+m5re$order <- 1:dim(m5re)[1] # code order as variable
+head(m5re)
+
+
+ggplot(data=m5re) + 
+  theme_bw() + # black-white theme
+  xlab("") + ylab("Country-Random Effects") + # axis labels
+  scale_x_discrete(limits=m5re$order, labels = m5re$country) + # axis labels
+  geom_pointrange(aes(ymin=lci, ymax=uci, y=re, x=order, group=Oil, color=Oil), size=1) + # random effects (points) + confidence intervals (range)
+  coord_flip() # exchange axes
+
+ggsave("figures/random_effects_byoil-ggplot-160321.pdf", height=6*1.618*2, width=6) # ggplot export (always saves last plot)
+
+
+
+### Plot 3D effect for population and GDP on democracy from Model 5
+## 3D Graphs (joint effect of two continuous variables)
+x1 <- seq(min(m5@frame$lgdpenl1), max(m5@frame$lgdpenl1), length=35) 
+x2 <- seq(min(m5@frame$lpopl1), max(m5@frame$lpopl1), length=35)
+
+# set remaining variables
+X <- c(1, 0, mean(m5@frame$ethfrac)) # Intercept (1), non-oil exporter (mode), mean of ethnif fractionalization
+beta <-  fixef(m5)
+
+y <- matrix(0, nrow=35, ncol=35) # prepare matrix for expectations, needs to be length(interaction1) * length(interaction2) which is 21
+
+# two loops
+for(i in 1:length(x1)){ # i-loop for all values of gdp (x)
+  for(j in 1:length(x2)){ # j-loop for all values of population (y)
+    y[i,j] <- c(X, x1[i], x2[j], x1[i]*x2[j])%*%beta # create data vector with control variables and independent variables and matrix multiply with coefficients
+  }
+}
+
+persp(x1, x2, y, # data
+      zlim=c(min(y)-1, max(y)+1),
+      xlab="GDP p.c. (log)",
+      ylab="Population (log)",
+      zlab="E(Polity|X)",
+      theta=30,
+      phi=30,
+      main=list("Polity Predictions"),
+      shade=0.3
+)
