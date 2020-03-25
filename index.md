@@ -12,6 +12,12 @@ Below are a series of resources for learning the Python generic programming lang
 
 [Practical Introduction to Python - PowerPoint](Q-Step_WS_02102019_Practical_introduction_to_Python.pptx)
 
+#### Introduction to GIS with QGIS
+
+A geographic information system (GIS) is a system designed to allow researchers to capture, store, manipulate, analyse, manage, and present spatial or geographic data. This workshop will introduce attendees to the introductory principles of GIS and how to use the Python-based QGIS for research purposes.
+
+[Introduction to QGIS - weblink](https://recapexeter.cloud.panopto.eu/Panopto/Pages/Auth/Login.aspx?Auth=Viewer&ReturnUrl=%2fPanopto%2fPages%2fViewer.aspx%3fid%3df580c9d6-f3aa-4e40-a379-ab540074db74)
+
 ## R
 Below are a series of training resources for learning the R statistical programming environment.
 
@@ -21,12 +27,19 @@ Below are a series of training resources for learning the R statistical programm
 
 [Introduction to R - PowerPoint](Q-Step_WS_09012019_An_introduction_to_R.pptx)
 
-#### Intermediate data analysis in R
+
+#### Presenting and visualising regression results in R
 
 This workshop introduces various ways of automating regression output from Stata and R. It starts by covering ways how to automate table creation for Latex and Word and then proceed to visualising marginal effects and predicted probabilities from linear and binary dependent variable regressions and finally discuss visualisation of interaction effects.
 
 [Presenting and visualising regression results in R - zip folder](Presenting_and_visualising_regression_results_in_R.zip)
 
+
+#### Geographical and Place-based dependence in multilevel models
+
+Session run by Dr Levi Wolf (University of Bristol)  as part of the Q-Step Seminar Series in the 2019/20 academic year. Held at the Clayden Computational Lab, Streatham Campus, University of Exeter on Friday 7th February 2020.
+
+[Geographical and Place-based dependence in multilevel models - web link](https://recapexeter.cloud.panopto.eu/Panopto/Pages/Auth/Login.aspx?Auth=Viewer&ReturnUrl=%2fPanopto%2fPages%2fViewer.aspx%3fid%3d77a56c0e-1a7e-4c14-b4b0-ab5900c722bf%26query%3dgeographical%2520and%2520place)
 
 ## SPSS
 
@@ -46,7 +59,7 @@ These resources are aimed at Q-Step students in their final year of study that a
 
 [Q-Step How to write a quantitative dissertation handbook - pdf](POL3040_How_to_Write_a_Quants_Dissertation_handbook.pdf)
 
-[Q-Step Disseration workshop 2016 - weblink](http://connect.exeter.ac.uk/p6ucunmp6a4/?proto=true)
+[Q-Step Disseration workshop 2017 - weblink](https://recapexeter.cloud.panopto.eu/Panopto/Pages/Auth/Login.aspx?Auth=Viewer&ReturnUrl=%2fPanopto%2fPages%2fViewer.aspx%3fid%3da237e871-0e55-471b-ac17-3817457854f0)
 
 [How to write a quantitative dissertation additional resources](Writing_quantitative_dissertation_supporting_materials.zip)
 
