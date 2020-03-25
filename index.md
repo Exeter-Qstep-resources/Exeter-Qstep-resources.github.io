@@ -93,6 +93,12 @@ This workshop introduces you to the basics of statistical analysis using SPSS fo
 
 [Introduction to SQL for Data Management - PowerPoint](Q-Step_WS_20032019_Intro_to_SQL_for_Data_Science.pptx)
 
+## Nvivo
+
+The workshop will introduce and provide hands on applications of various techniques of content analysis especially focusing on the analysis of texts. It starts from outlining the key concepts, defining units of analysis and understanding measurement techniques and theoretical approaches. It then moves on to reviewing applications of content analysis to Social Sciences data (e.g., parliamentary records, political manifestos, policy documents). Finally, participants will be provided with textual data to practice the content analysis techniques.Feel free to bring your own documents (any type of text in digitised, preferably .txt, format) to the workshop
+
+[Nvivo workshop materials - zip folder](Nvivo_workshop.zip)
+
 # Quantiative research methods
 
 ## How to read an empirical paper
