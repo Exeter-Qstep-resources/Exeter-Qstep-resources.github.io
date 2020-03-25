@@ -52,6 +52,13 @@ Session run by Dr Levi Wolf (University of Bristol)  as part of the Q-Step Semin
 
 # Quantiative research methods
 
+## How to read an empirical paper
+
+Reading empirical articles can be intimidating. The new reader may be daunted by technical jargon, complex methodological procedures and statistical analysis. This workshop will guide you through a process to make sense of the typical analysis in an empirical study.
+
+[How to read an empirical paper workshop - weblink](http://connect.exeter.ac.uk/p5bro0xaa3t/?proto=true)
+
+[How to read an empirical paper workshop supporting materials - zip folder](How_to_read_an_empirical_paper_supporting_materials.zip)
 
 ## Writing a quantitative dissertation
 
@@ -65,4 +72,13 @@ These resources are aimed at Q-Step students in their final year of study that a
 
 # Qualitative research methods
 
+# Survey design
+
+## Qualtrics
+
+Using Qualtrics to design and field surveys and survey experiments.
+
+[Introduction to Qualtrics Workshop - web link](http://connect.exeter.ac.uk/p9bbugsoz48/?proto=true)
+
+[Introduction to Qualtrics Workshop Supporting materials - zip folder](Qualtrics_materials_20200325.zip)
 
