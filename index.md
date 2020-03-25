@@ -43,6 +43,18 @@ Session run by Dr Levi Wolf (University of Bristol)  as part of the Q-Step Semin
 
 ## SPSS
 
+#### Introduction to SPSS
+
+The Q-Step workshop offers a brief guidance on how to get started with SPSS. It reflects on the drawbacks and benefits of the software and explains how to prepare your data to use in SPSS. The workshop then moves on to demonstrate how you can describe the data in SPSS using the 2010 British Election Study data. There are no pre-requisites for taking the workshop, and no prior knowledge of data analysis is assumed.
+
+[Introduction to SPSS workshop materials - zip folder](Introduction_to_SPSS.zip)
+
+#### Intermediate SPSS
+
+This workshop introduces you to the basics of statistical analysis using SPSS focusing on cross-tabulations and correlations in particular. The workshop is taught at the intermediate level and requires basic knowledge of SPSS or the attendance of SPSS Beginners Workshop.
+
+[Intermediate SPSS workshop materials - zip folder](Intermediate_SPSS.zip)
+
 ## SQL
 #### Introduction to SQL
 
