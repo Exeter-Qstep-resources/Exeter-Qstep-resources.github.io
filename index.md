@@ -15,9 +15,9 @@ Below are a series of resources for learning the Python generic programming lang
 
 #### Data analysis and visualisation with Python
 
-[Q-Step_WS_06112019_Data_Analysis_and_visualisation_with_Python.pdf](Q-Step_WS_02102019_Practical_introduction_to_Python.pdf)
+[Data Analysis and visualisation with Python - pdf](Q-Step_WS_02102019_Practical_introduction_to_Python.pdf)
 
-[Q-Step_WS_06112019_Data_Analysis_and_visualisation_with_Python.pptx](Q-Step_WS_02102019_Practical_introduction_to_Python.pptx)
+[Data Analysis and visualisation with Python - PowerPoint](Q-Step_WS_02102019_Practical_introduction_to_Python.pptx)
 
 
 
