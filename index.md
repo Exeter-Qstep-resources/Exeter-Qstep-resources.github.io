@@ -139,6 +139,10 @@ These resources are aimed at Q-Step students in their final year of study that a
 
 [How to write a quantitative dissertation additional resources](Writing_quantitative_dissertation_supporting_materials.zip)
 
+## Politics through the life course
+
+[Politics through the life course workshop materials - zip folder](Politics_through_the_life_course.zip)
+
 # Qualitative research methods
 
 # Survey design
