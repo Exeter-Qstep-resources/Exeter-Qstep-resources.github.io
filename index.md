@@ -66,6 +66,12 @@ The workshop provides an introduction for beginners to Social Network Analysis. 
 
 [Social Network Analysis in R workshop materials - zip folder](Social_network_analysis_in_R.zip)
 
+#### Collecting social media data in R
+
+This workshop provides an introduction to the main methods used to access download and store social media data. You will learn how to use Twitter's APIs to collect past and future data, and how to access Facebook data using its Graph API. Basic knowledge of programming in R is required, and participants are encouraged to attend the "Introduction to Programming in R" workshop first.  
+
+[Collecting social media data workshop materials - zip folder](Collecting_social_media_data_workshop.zip)
+
 #### Geographical and Place-based dependence in multilevel models
 
 Session run by Dr Levi Wolf (University of Bristol)  as part of the Q-Step Seminar Series in the 2019/20 academic year. Held at the Clayden Computational Lab, Streatham Campus, University of Exeter on Friday 7th February 2020.
