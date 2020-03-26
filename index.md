@@ -8,9 +8,23 @@ Below are a series of resources for learning the Python generic programming lang
 
 #### Introduction to Python
 
+
 [Practical Introduction to Python - pdf](Q-Step_WS_02102019_Practical_introduction_to_Python.pdf)
 
 [Practical Introduction to Python - PowerPoint](Q-Step_WS_02102019_Practical_introduction_to_Python.pptx)
+
+
+#### Introduction to Jupyter notebooks
+
+[Introduction to Jupyter notebooks workshop materials - zip folder](Introduction_to_Jupyter_notebooks.zip)
+
+#### Python for social scientists
+
+[Python for social scientists workshop materials - zip folder](Introduction_to_Python_for_social_scientists.zip)
+
+#### Text data analysis in Python
+
+[Text data analysis in Python workshop materials - zip folder](Text_as_data_analysis_in_Python.zip)
 
 #### Introduction to GIS with QGIS
 
