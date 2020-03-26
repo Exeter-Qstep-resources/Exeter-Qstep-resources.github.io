@@ -13,6 +13,13 @@ Below are a series of resources for learning the Python generic programming lang
 
 [Practical Introduction to Python - PowerPoint](Q-Step_WS_02102019_Practical_introduction_to_Python.pptx)
 
+#### Data analysis and visualisation with Python
+
+[Q-Step_WS_06112019_Data_Analysis_and_visualisation_with_Python.pdf](Q-Step_WS_02102019_Practical_introduction_to_Python.pdf)
+
+[Q-Step_WS_06112019_Data_Analysis_and_visualisation_with_Python.pptx](Q-Step_WS_02102019_Practical_introduction_to_Python.pptx)
+
+
 
 #### Introduction to Jupyter notebooks
 
