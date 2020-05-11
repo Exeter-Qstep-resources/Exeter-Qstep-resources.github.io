@@ -63,6 +63,16 @@ Building upon the "Introduction to Programming in R" session, this workshop prov
 
 [Data analysis in R workshop materials - zip folder](Data_analysis_in_R_materials.zip)
 
+#### Introduction to Bayesian analysis with R - 11/05/2020
+One of the advantages of Bayesian analysis is its great flexibility with respect to the functional form of the model. To take full advantage of this flexibility, the analyst need to know how to write code for Stan, JAGS, BUGS or a similar sample.
+
+In this workshop, we will learn the basics of modelling with JAGS (“Just Another Gibbs Sampler”) and R. As an application, we will work through the estimation of simple multi-level models and models with measurement errors.
+
+[Introduction_to_Bayesian_analysis_with_R_slides.pdf - pdf](Bayesian_workshop11052020_slides.pdf.pdf)
+
+[Introduction_to_Bayesian_analysis_with_R_resources.zip - zip folder](Data_visualisation_in_R.zip)
+
+
 #### Data visualisation in R
 
 An introduction to the common approaches to data visualisation in R, including line / bar charts, scatterplots, histogram and density plots in base R and using the ggplot2 package. We will also discuss the aesthetics, geoms and faceting systems in ggplot2. Please bring your own laptop with R, RStudio, and the following packages installed: "tidyverse", "titanic".
