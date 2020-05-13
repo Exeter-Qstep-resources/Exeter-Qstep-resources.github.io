@@ -68,10 +68,18 @@ One of the advantages of Bayesian analysis is its great flexibility with respect
 
 In this workshop, we will learn the basics of modelling with JAGS (“Just Another Gibbs Sampler”) and R. As an application, we will work through the estimation of simple multi-level models and models with measurement errors.
 
-[Introduction_to_Bayesian_analysis_with_R_slides.pdf - pdf](Bayesian_workshop11052020_slides.pdf.pdf)
+[Introduction_to_Bayesian_analysis_with_R_slides.pdf - pdf](Bayesian_workshop11052020_slides.pdf)
 
-[Introduction_to_Bayesian_analysis_with_R_resources.zip - zip folder](Data_visualisation_in_R.zip)
+[Introduction_to_Bayesian_analysis_with_R_resources - zip folder](Introduction_to_Bayesian_analysis_with_R_resources.zip)
 
+#### Bayesian analysis with JAGS/Topics in Bayesian analysis with R - 12/05/2020
+One of the advantages of Bayesian analysis is its great flexibility with respect to the functional form of the model. To take full advantage of this flexibility, the analyst need to know how to write code for Stan, JAGS, BUGS or a similar sample.
+
+In this workshop, we will learn the basics of modelling with JAGS (“Just Another Gibbs Sampler”) and R. As an application, we will work through the estimation of simple multi-level models and models with measurement errors.
+
+[Introduction_to_JAGS_with_R_slides - pdf](Working_with_JAGS_and_R_workshop_12052020.pdf)
+
+[Introduction_to_JAGS_with_R_resources - zip folder](Intro_to_JAGS_and_R.zip)
 
 #### Data visualisation in R
 
