@@ -48,7 +48,7 @@ This will be an applied workshop where you will be introduced to some tools for 
 
 Adina Pintilie is a proud alumna of Q-Step’s BSc Politics and IR programme. She holds an MA in Applied Security and Strategy and is an Open Source Intelligence Researcher at Ridgeway Information. She has previously worked on academic research projects focusing on the uses of social media and the main polling division of the European Union. Currently, she works with a major United Nations agency, the UK government and the National Police Chiefs' Council on implementation of OSINT skills and methodologies
 
-[Introduction to_OSINT_slides - pdf](Introduction_to_OSINT_slides_15052020.pdf)
+[Introduction to OSINT slides - pdf](Introduction_to_OSINT_slides_15052020.pdf)
 
 ## R
 Below are a series of training resources for learning the R statistical programming environment.
