@@ -19,11 +19,17 @@ Below are a series of resources for learning the Python generic programming lang
 
 [Data Analysis and visualisation with Python - PowerPoint](Q-Step_WS_06112019_Data_Analysis_and_visualisation_with_Python.pptx)
 
-
-
 #### Introduction to Jupyter notebooks
+Jupyter notebooks are a fantastic way to learn how to code in Python. They enable instructor to essentially build interactive textbooks. Jupyter is installed as part of the Anaconda distribution of Python. Instructions for downloading and installing this can be found in the following document:
 
+[How to install the Anaconda distribution of Python - pdf file](How_to_install_anaconda.pdf)
+
+The following serves as an introduction to Jupyter notebooks:
 [Introduction to Jupyter notebooks workshop materials - zip folder](Introduction_to_Jupyter_notebooks.zip)
+
+The following file covers the content that is covered in the Introduction to Python and Data Analysis with Python workshops above, but allows for the interactivity of the notebooks. Do note that you will need Jupyter installed before you can run the notebook, see the above zip folder.
+
+[Introduction to Python for Data Analysis Hupyter notebook - ipynb](An_introduction_to_python_for_data_analysis.ipynb)
 
 #### Python for social scientists
 
