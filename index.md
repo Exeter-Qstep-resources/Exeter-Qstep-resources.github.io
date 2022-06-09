@@ -19,6 +19,9 @@ Below are a series of resources for learning the Python generic programming lang
 
 [Data Analysis and visualisation with Python - PowerPoint](Q-Step_WS_06112019_Data_Analysis_and_visualisation_with_Python.pptx)
 
+[Pokemon dataset for Python visualisation course](pokemon_dataset.csv)
+
+
 #### Introduction to Jupyter notebooks
 Jupyter notebooks are a fantastic way to learn how to code in Python. They enable instructor to essentially build interactive textbooks. Jupyter is installed as part of the Anaconda distribution of Python. Instructions for downloading and installing this can be found in the following document:
 
